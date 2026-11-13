@@ -16,7 +16,10 @@ Pre-Lab
 ````c
 void Chassis_Board_LEDs_Init()
 {
-
+    P8->SEL0 &= ~0xE1;
+    P8->SEL1 &= ~0xE1;
+    P8->DIR |= 0xE1;
+    P8->OUT &= ~0xE1;
 }
 ````
 
